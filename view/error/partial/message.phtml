@@ -1,0 +1,19 @@
+<?php
+switch ($this->reason):
+    case 'error-controller-cannot-dispatch':
+        $this->message = 'The requested controller was unable to dispatch the request.';
+        break;
+    case 'error-controller-not-found':
+        $this->message = 'The requested controller could not be mapped to an existing controller class.';
+        break;
+    case 'error-controller-invalid':
+        $this->message = 'The requested controller was not dispatchable.';
+        break;
+    case 'error-router-no-match':
+        $this->message = 'The requested URL could not be matched by routing.';
+        break;
+endswitch;
+?>
+<p>
+    <?= $this->escapeHtml($this->message) ?>
+</p>

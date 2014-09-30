@@ -1,0 +1,7 @@
+<h1>Controller</h1>
+<p>
+    <?= $this->escapeHtml($this->controller) ?>
+    <?php if ($this->controller_class && $this->controller_class != $this->controller): ?>
+        <?= sprintf('resolves to %s', $this->escapeHtml($this->controller_class)) ?>
+    <?php endif; ?>
+</p>

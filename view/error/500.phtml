@@ -1,0 +1,7 @@
+<h1>500: Internal Server Error</h1>
+<?php if ($this->message): ?>
+    <?= $this->partial('error/partial/message') ?>
+<?php endif; ?>
+<?php if ($this->display_exceptions): ?>
+    <?= $this->partial('error/partial/exception') ?>
+<?php endif; ?>

@@ -1,0 +1,25 @@
+<h1>Exception</h1>
+<?php if($this->exception && $this->exception instanceof Exception): ?>
+    <dl>
+        <dt>Class:</dt>
+        <dd>
+            <?= get_class($this->exception) ?>
+        </dd>
+        <dt>Line:</dt>
+        <dd>
+            <pre><?= $this->exception->getFile() .':'. $this->exception->getLine() ?></pre>
+        </dd>
+        <dt>Message:</dt>
+        <dd>
+            <pre><?= $this->exception->getMessage() ?></pre>
+        </dd>
+        <dt>Stack trace:</dt>
+        <dd>
+            <pre><?= $this->exception->getTraceAsString() ?></pre>
+        </dd>
+    </dl>
+<?php else: ?>
+    <p>
+        No exception available
+    </p>
+<?php endif ?>

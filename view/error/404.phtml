@@ -1,0 +1,10 @@
+<h1>404: Not Found</h1>
+<?php if ($this->message): ?>
+    <?= $this->partial('error/partial/message') ?>
+<?php endif; ?>
+<?php if ($this->display_exceptions): ?>
+    <?php if ($this->controller): ?>
+        <?= $this->partial('error/partial/controller') ?>
+    <?php endif; ?>
+    <?= $this->partial('error/partial/exception') ?>
+<?php endif; ?>
